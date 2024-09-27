@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inverse Trigonometric Ratios Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <video autoplay loop muted class="background-video">
+        <source src="water_animals.mp4" type="video/mp4"> <!-- Replace with your video name -->
+        Your browser does not support the video tag.
+    </video>
+    <div class="header">
+        <h1>INVERSE TRIGONOMETRIC RATIOS</h1>
+        <h2>made by Sarvajith R</h2>
+    </div>
+    <div class="container">
+        <div class="box" id="dropdown-box">
+            <label for="ratio">Select Inverse Trigonometric Ratio:</label>
+            <select id="ratio">
+                <option value="asin">arcsin</option>
+                <option value="acos">arccos</option>
+                <option value="atan">arctan</option>
+                <option value="acsc">arccsc</option>
+                <option value="asec">arcsec</option>
+                <option value="acot">arccot</option>
+            </select>
+        </div>
+        <div class="box" id="numerator-box">
+            <label for="numerator">Numerator:</label>
+            <input type="number" id="numerator" placeholder="Enter numerator">
+        </div>
+        <div class="box" id="denominator-box">
+            <label for="denominator">Denominator:</label>
+            <input type="number" id="denominator" placeholder="Enter denominator">
+        </div>
+        <div class="box" id="result-box">
+            <button id="calculate">Calculate</button>
+            <div id="result"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

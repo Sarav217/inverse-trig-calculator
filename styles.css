@@ -1,0 +1,93 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh; /* Full height */
+    overflow: hidden; /* Hide overflow */
+}
+
+.background-video {
+    position: fixed; /* Make the video fixed */
+    top: 0;
+    left: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    object-fit: cover; /* Cover the entire area */
+    z-index: -1; /* Send the video to the back */
+}
+
+.header {
+    margin: 7.5em 0 20px 0; /* Space above the title */
+    position: relative; /* To layer above video */
+    text-align: center; /* Center the text */
+}
+
+h1 {
+    font-size: 2.5em; /* Increase title size */
+    margin: 10px 0; /* Margins around title */
+    color: white; /* Text color */
+    text-shadow: 2px 2px 0 black; /* Black border effect */
+}
+
+h2 {
+    font-size: 1.5em; /* Increase subtitle size */
+    margin: 5px 0; /* Margins around subtitle */
+    color: white; /* Text color */
+    text-shadow: 2px 2px 0 black; /* Black border effect */
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns for the first three boxes */
+    grid-template-rows: auto auto; /* Two rows */
+    gap: 20px 80px; /* Space between boxes: 20px vertical, 80px horizontal */
+    justify-items: center; /* Center items horizontally */
+    margin: auto; /* Center the grid */
+    max-width: 900px; /* Limit maximum width */
+    position: relative; /* To layer above video */
+    z-index: 1; /* Bring to front */
+}
+
+.box {
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    border-radius: 10px;
+    padding: 30px; /* Increase padding */
+    width: 100%; /* Full width of the grid cell */
+    text-align: center;
+    font-size: 1.5em; /* Increase text size */
+    position: relative; /* To layer above video */
+}
+
+.box label {
+    color: white; /* White color for box headings */
+    font-weight: bold; /* Bold text */
+}
+
+input, select {
+    width: 100%; /* Make inputs and select fill the box */
+    padding: 10px;
+    font-size: 1em; /* Increase input font size */
+}
+
+#denominator-box {
+    position: relative; /* Position for the forward slash */
+}
+
+#denominator-box::before {
+    content: '/';
+    position: absolute;
+    left: -20px; /* Adjust as needed */
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2em;
+    color: black; /* Black color for the forward slash */
+}
+
+#result-box {
+    grid-column: span 3; /* Make the result box span all three columns */
+}
+
+#result {
+    color: white; /* White color for the result */
+    text-shadow: 1px 1px 0 black; /* Black border effect for the result */
+    margin-top: 10px; /* Space above the result */
+}
